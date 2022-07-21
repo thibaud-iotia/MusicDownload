@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MusicDownload/static/css/main.081b3fd2.css",
+    "main.js": "/MusicDownload/static/js/main.74e81ff4.js",
+    "index.html": "/MusicDownload/index.html",
+    "main.081b3fd2.css.map": "/MusicDownload/static/css/main.081b3fd2.css.map",
+    "main.74e81ff4.js.map": "/MusicDownload/static/js/main.74e81ff4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.081b3fd2.css",
+    "static/js/main.74e81ff4.js"
+  ]
+}

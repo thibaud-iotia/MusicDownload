@@ -40,7 +40,8 @@ export default function Music({ videoData }) {
     handleClose();
     console.log(type)
     //download the video
-    downloadData("http://172.17.224.1:4000/download?URL=" + videoUrl + "&type=" + type + "&title=" + data.title);
+    // downloadData("http://192.168.0.14:8080/download?URL=" + videoUrl + "&type=" + type + "&title=" + data.title);
+    downloadData("https://downloadmusic.cleverapps.io/download?URL=" + videoUrl + "&type=" + type + "&title=" + data.title);
   }
   const downloadData = async (url) => {
     console.log(url)

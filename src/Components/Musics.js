@@ -14,7 +14,12 @@ const Musics = () => {
         if (result !== "") {
             axios
                 .get("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=" + searched + "&key=" + process.env.REACT_APP_YOUTUBE_API_KEY)
-                .then((res) => setResult(res.data.items));
+                .then(res => {
+                    setResult(res.data.items);
+                  });
+                // .then((res) => 
+                //     setResult(res.data.items)
+                // );
         }
     }
     //reset research
@@ -29,9 +34,11 @@ const Musics = () => {
                 onRequestSearch={() => setRequestSearch(searched)}
                 placeholder="Press enter to search"
             />
-            {result.map((video, id) => (
-                <Music key={id} videoData={video} />
-            ))}
+            <div className='cards'>
+                {result.map((video, id) => (
+                    <Music key={id} videoData={video} />
+                ))}
+            </div>
         </div>
     );
 

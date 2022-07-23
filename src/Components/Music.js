@@ -15,7 +15,6 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-
 export default function Music({ videoData }) {
     //to select file type
     const [type, setType] = React.useState('');
@@ -53,12 +52,13 @@ export default function Music({ videoData }) {
     handleClickOpen();
   }
   return (
-    <Box display="inline-block" sx={{ width: 600 }}>
-      <Card sx={{ margin: 1, height: 300 }} onClick={(e) => downloadVideo(videoData.id.videoId)}>
+    <Box display="inline-block" sx={{ width: {sm: '10px', md : 300} }}>
+      <Card sx={{ margin: 1, height: 450, maxWidth: 600 }} onClick={(e) => downloadVideo(videoData.id.videoId)}>
         <CardActionArea>
           <CardMedia
+            sx={{height: "15em", objectFit: 'fill'}}
             component="img"
-            height="140"
+            // height="140"
             image={data.thumbnails.high.url}
             alt="image of Youtube video"
           />

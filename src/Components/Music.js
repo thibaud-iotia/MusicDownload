@@ -14,14 +14,16 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Badge from '@mui/material/Badge';
+
 
 export default function Music({ videoData }) {
-    //to select file type
-    const [type, setType] = React.useState('');
+  //to select file type
+  const [type, setType] = React.useState('');
 
-    const handleChange = (event) => {
-        setType(event.target.value);
-    };
+  const handleChange = (event) => {
+      setType(event.target.value);
+  };
   //for dialog box
   const [open, setOpen] = React.useState(false);
 
@@ -32,7 +34,7 @@ export default function Music({ videoData }) {
   const handleClose = () => {
     setOpen(false);
   };
-  // console.log(videoData);
+  console.log(videoData);
   const data = videoData.snippet;
   const [videoUrl, setVideoUrl] = useState("");
   const confirmDownload = () =>{
@@ -62,6 +64,9 @@ export default function Music({ videoData }) {
             image={data.thumbnails.high.url}
             alt="image of Youtube video"
           />
+          <Badge sx={{float: 'right', marginRight: 0.5, marginTop: -2, color: 'white', backgroundColor: 'black'}}>
+            <span>{data.duration}</span>
+          </Badge>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               {data.title}

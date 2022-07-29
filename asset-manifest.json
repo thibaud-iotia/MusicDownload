@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/MusicDownload/static/css/main.f9465628.css",
-    "main.js": "/MusicDownload/static/js/main.dc214ba4.js",
+    "main.js": "/MusicDownload/static/js/main.59e71730.js",
     "index.html": "/MusicDownload/index.html",
     "main.f9465628.css.map": "/MusicDownload/static/css/main.f9465628.css.map",
-    "main.dc214ba4.js.map": "/MusicDownload/static/js/main.dc214ba4.js.map"
+    "main.59e71730.js.map": "/MusicDownload/static/js/main.59e71730.js.map"
   },
   "entrypoints": [
     "static/css/main.f9465628.css",
-    "static/js/main.dc214ba4.js"
+    "static/js/main.59e71730.js"
   ]
 }

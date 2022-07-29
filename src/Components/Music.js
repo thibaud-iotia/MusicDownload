@@ -56,7 +56,7 @@ export default function Music({ videoData }) {
   }
   return (
     <Box display="inline-block" sx={{ width: {sm: '10px', md : 300} }}>
-      <Card sx={{ margin: 1, height: 450, maxWidth: 600 }} onClick={(e) => downloadVideo(videoData.id.videoId)}>
+      <Card sx={{ maxWidth: {xs: 350, md : 600}, height: 450, margin: 1 }} onClick={(e) => downloadVideo(videoData.id.videoId)}>
         <CardActionArea>
           <CardMedia
             sx={{height: "15em", objectFit: 'fill'}}

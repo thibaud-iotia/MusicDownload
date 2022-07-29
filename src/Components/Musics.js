@@ -73,6 +73,7 @@ const Musics = () => {
                 onChange={(newValue) => setSearched(newValue)}
                 onRequestSearch={() => setRequestSearch(searched)}
                 placeholder="Press enter to search"
+                className='searchBar'
             />
             <div className='cards'>
                 {result.map((video, id) => (

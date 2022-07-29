@@ -1,3 +1,18 @@
-.cards{
-    text-align: center;
+// .cards{
+//     text-align: center;
+// }
+.musics{
+    .searchBar{
+        position: sticky;
+        z-index: 1;
+        top: 6.6vh;
+    }
+
+    @media screen and (max-width: 600px){
+        .searchBar{
+            position: sticky;
+            z-index: 1;
+            top: 8vh;
+        }
+    }
 }

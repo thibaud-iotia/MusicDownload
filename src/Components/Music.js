@@ -18,6 +18,7 @@ import Badge from '@mui/material/Badge';
 
 
 export default function Music({ videoData }) {
+  console.log(videoData);
   //to select file type
   const [type, setType] = React.useState('');
 
@@ -34,15 +35,15 @@ export default function Music({ videoData }) {
   const handleClose = () => {
     setOpen(false);
   };
-  console.log(videoData);
+
   const data = videoData.snippet;
   const [videoUrl, setVideoUrl] = useState("");
   const confirmDownload = () =>{
     handleClose();
     console.log(type)
     //download the video
-    // downloadData("http://192.168.0.14:8080/download?URL=" + videoUrl + "&type=" + type + "&title=" + data.title);
-    downloadData("https://downloadmusic.cleverapps.io/download?URL=" + videoUrl + "&type=" + type + "&title=" + data.title);
+     downloadData("http://192.168.0.14:8080/download?URL=" + videoUrl + "&type=" + type + "&title=" + data.title);
+    //downloadData("https://downloadmusic.cleverapps.io/download?URL=" + videoUrl + "&type=" + type + "&title=" + data.title);
   }
   const downloadData = async (url) => {
     console.log(url)
@@ -97,7 +98,7 @@ export default function Music({ videoData }) {
               onChange={handleChange}
             >
               <MenuItem value={"mp4"}>Mp4</MenuItem>
-              <MenuItem value={"mp3"}>Mp3</MenuItem>
+              <MenuItem value={"webm"}>Webm(audio)</MenuItem>
             </Select>
           </FormControl>
         </DialogContent>
